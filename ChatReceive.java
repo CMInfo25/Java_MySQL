@@ -11,12 +11,15 @@ public class ChatReceive
     public static void main(String[] argv)
     {
         String input = "";
+        int res;
         int co = BD.ouvrirConnexion(Server.ip, Server.base, Server.user, Server.pass);
-        while (input != ":q")
+        while (true)
         {
-            input = Clavier.saisirString();
-            if (input != ":q")
-                BD.executerUpdate(co, "INSERT INTO message [(msgTexte, msgPseudo)] VALUES (" + input + ", " + Server.user + ")");
+            res = BD.executerSelect(co, "SELECT * FROM message");
+            while (BD.suivant(res))
+            {
+
+            }
         }
     }
 }

@@ -2,7 +2,7 @@ public class ChatSend
 {
     public static class Server
     {
-        static String ip = "172.20.128.64";
+        static String ip = "172.20.128.64";    
         static String user = "chat_user";
         static String pass = "chat_pass";
         static String base = "chat";
